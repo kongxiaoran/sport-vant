@@ -1,14 +1,14 @@
 <template>
     <div class="index">
-        <van-nav-bar
+        <!-- <van-nav-bar
         title="打卡考勤"
         left-text="返回"
         left-arrow
         :fixed='true'
         @click-left="onClickLeft"
         > 
-        </van-nav-bar>
-        <div style="padding-top:4rem">
+        </van-nav-bar> -->
+        <div style="padding-top:2em">
         </div>
         <div class="selectList">
             <div>
@@ -17,12 +17,12 @@
             </div>
             <div>
                 <font style="position:relative;left:0%;font-size:13px">请求选择俱乐部名称</font>
-                <van-dropdown-menu style="width:120px;position:relative;left:64%;top:-.9em">
+                <van-dropdown-menu style="width:30px;position:relative;left:85%;top:-.9em">
                     <van-dropdown-item v-model="value1" :options="option1" />
                 </van-dropdown-menu>
             </div>
         </div>
-        <div style="height=100px">
+        <div style="margin-bottom:1em">
             <van-swipe>
                 <van-swipe-item v-for="(item,i) in club1" :key="i">
                     <div class="clubCard" v-for="(it,k) in item" :key="k">
@@ -40,7 +40,7 @@
                 <svg t="1569398047113" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7738" width="18" height="18"><path d="M 859.261 978.369 h -47.361 v -916.672 h 47.361 c 26.239 0 47.361 21.248 47.361 47.423 v 821.824 c 0 26.176 -21.121 47.423 -47.361 47.423 Z M 212.029 930.946 v -47.361 h 78.912 c 52.288 0 94.72 -42.495 94.72 -94.784 c 0 -52.353 -42.432 -94.783 -94.72 -94.784 h -78.912 v -79.168 h 78.912 c 52.288 0 94.72 -42.432 94.72 -94.784 s -42.432 -94.783 -94.72 -94.784 h -78.912 v -79.104 h 78.912 c 52.288 0 94.72 -42.432 94.72 -94.784 s -42.432 -94.783 -94.72 -94.784 h -78.912 v -47.489 c 0 -26.176 21.184 -47.425 47.361 -47.425 h 505.215 v 916.672 h -505.215 c -26.176 0 -47.361 -21.248 -47.361 -47.423 Z M 338.368 251.392 c 0 26.176 -21.248 47.425 -47.361 47.425 h -126.338 c -26.112 0 -47.296 -21.248 -47.296 -47.425 s 21.184 -47.423 47.296 -47.423 h 126.335 c 26.112 0 47.361 21.248 47.361 47.423 Z M 164.672 472.64 h 126.338 c 26.112 0 47.358 21.248 47.358 47.425 s -21.248 47.361 -47.358 47.361 h -126.338 c -26.112 0 -47.296 -21.184 -47.296 -47.361 s 21.184 -47.425 47.296 -47.425 Z M 164.672 741.313 h 126.338 c 26.112 0 47.358 21.248 47.358 47.425 s -21.248 47.361 -47.358 47.361 h -126.338 c -26.112 0 -47.296 -21.184 -47.296 -47.361 s 21.184 -47.425 47.296 -47.425 Z" fill="#1296db" p-id="7739"></path></svg>
             </p>
             <div class="inner" style="margin-left:0em;">
-                <div class="classList" v-for="(it,k) in course" :key="k">
+                <div class="classList" v-for="(it,k) in course" :key="k" @click="routeToCourse">
                    <p style="margin-top:0em;margin-left:1em">{{it.courseName}}  {{it.sort}}</p>
                    <p style="margin-top:-.2em;margin-left:1em">{{it.date}}   {{it.time}}</p>
                    <p v-show="it.status=='已上课'" style="color:#47e4bb;margin-top:-3em;margin-left:16em;">{{it.status}}</p>
@@ -96,6 +96,9 @@ export default {
         }
         this.club1 = temp;
         // console.log(JSON.stringify(this.club1))
+    },
+    routeToCourse(){
+        this.$router.push({name:'Course',params:{id:'1'}});
     }
   },
   mounted(){
@@ -114,14 +117,14 @@ export default {
         line-height: 60px;
         /* max-width: 30em; */
     }    
-
-    .selectList{
-        height: 100px;
-    }
+    
     .selectList /deep/ .van-hairline--top-bottom::after, .van-hairline-unset--top-bottom::after{
         border-width: 0 0;
     }
 
+    .selectList{
+        height: 5em;
+    }
     .clubCard img{
         height:100px;width:100px
     }

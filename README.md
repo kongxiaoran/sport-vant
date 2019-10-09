@@ -1,6 +1,6 @@
 # sports-vant
 
-> 给吴老师写的关于学校体育打卡软件
+> 关于学校体育打卡demo
 
 ## Build Setup
 

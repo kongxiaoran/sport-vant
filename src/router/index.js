@@ -4,6 +4,8 @@ import Router from 'vue-router'
 import Index from '@/pages/index'
 import Course from '@/pages/course'
 import Clock from '@/pages/clock'
+import Login from '@/pages/login'
+
 Vue.use(Router)
 
 export default new Router({
@@ -24,6 +26,11 @@ export default new Router({
       path: '/clock',
       name: 'Clock',
       component: Clock
-    }
+    },
+    {
+      path: '/login',
+      name: 'Login',
+      component: Login
+    },
   ]
 })

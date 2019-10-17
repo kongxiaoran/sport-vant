@@ -2,6 +2,12 @@
 
 > 关于学校体育打卡demo
 
+页面预览：
+1.https://hfuu.top/demo
+2.https://hfuu.top/demo/login
+3.https://hfuu.top/demo/clock
+4.https://hfuu.top/demo/course
+
 ## Build Setup
 
 ``` bash

@@ -2,11 +2,11 @@
 
 > 关于学校体育打卡demo
 
-页面预览：
-1.https://hfuu.top/demo
-2.https://hfuu.top/demo/login
-3.https://hfuu.top/demo/clock
-4.https://hfuu.top/demo/course
+页面预览：                       <br>
+1.https://hfuu.top/demo         <br>   
+2.https://hfuu.top/demo/login   <br>
+3.https://hfuu.top/demo/clock   <br>
+4.https://hfuu.top/demo/course  <br>
 
 ## Build Setup
 
